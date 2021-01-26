@@ -20,7 +20,7 @@ jobs:
       run: dotnet restore
       
     - name: Build
-      run: dotnet build --configuration $config --no-restore
+      run: dotnet build --no-restore
       
     - name: Run Tests and Generate Coverage
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=opencover
