@@ -43,7 +43,7 @@ jobs:
     
     - name: Codecov
       uses: codecov/codecov-action@v1.0.7
-        with:
+      with:
           # User defined upload name. Visible in Codecov UI
           name: POC
           # Repository upload token - get it from codecov.io. Required only for private repositories
