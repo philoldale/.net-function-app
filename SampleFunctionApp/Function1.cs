@@ -24,12 +24,7 @@ namespace SampleFunctionApp
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
-
-            if (name != null && name == "Phil")
-            {
-                Console.WriteLine("hello Phil");
-            }
-
+            
             string responseMessage = string.IsNullOrEmpty(name)
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
